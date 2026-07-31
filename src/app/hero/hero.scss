@@ -6,7 +6,7 @@
   @include mixin.flex-start();
   width: 60%;
   min-height: 100%;
-  height: calc(100vh - 150px);
+  height: calc(100% - 150px);
   padding-left: 25px;
 }
 
@@ -23,6 +23,12 @@
   min-height: 100%;
   height: calc(905px - 150px);
   padding-right: 50px;
+
+  @include mixin.respond-to('small') {
+    width: 100%;
+    padding-right: 25px;
+
+  }
 }
 
 .button-content {
@@ -43,6 +49,22 @@
   padding-bottom: 0;
 }
 
+app-images-component:has(.arrow-icon) {
+  top: 50%;
+  left: 2%;
+  transform: translate(50%, 50%) !important;
+  text-align: center;
+  position: relative !important ;
+}
+
+a.router-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+
+  & app-images-component:has(.arrow-icon) {
+    margin-left: 15px;
+  }
+}
 
 app-images-component:nth-child(1) {
   position: absolute;
@@ -52,7 +74,6 @@ app-images-component:nth-child(1) {
   right: 2%;
   transform: translate(0%, -50%);
   max-width: 460px;
-  max-height: 460px;
 }
 
 app-images-component:nth-child(2) {
@@ -63,8 +84,7 @@ app-images-component:nth-child(2) {
   right: 4%;
   transform: translate(0%, -50%);
   max-width: 460px;
-  max-height: 460px;
-}
+ }
 
 app-images-component:nth-child(3) {
   position: absolute;
@@ -74,7 +94,6 @@ app-images-component:nth-child(3) {
   right: 3%;
   transform: translate(0%, -50%);
   max-width: 460px;
-  max-height: 460px;
 }
 
 app-images-component:nth-child(4) {
@@ -87,8 +106,7 @@ app-images-component:nth-child(4) {
   right: 4%;
   transform: translate(0%, -50%);
   max-width: 460px;
-  max-height: 460px;
-}
+  }
 
 app-images-component:nth-child(5) {
   opacity: 0;
@@ -100,27 +118,7 @@ app-images-component:nth-child(5) {
   right: 1%;
   transform: translate(0%, -50%);
   max-width: 460px;
-  max-height: 460px;
-}
-
-app-images-component:has(.arrow-icon) {
-  position: relative;
-  display: inline-block;
-  width: 30px;
-  height: 0px;
-  margin-left: 10px;
-  text-align: center;
-}
-
-a.router-link:hover {
-  text-decoration: underline;
-  cursor: pointer;
-  margin-left: 20px;
-
-  & app-images-component:has(.arrow-icon) {
-    margin-left: 15px;
   }
-}
 
 @include mixin.respond-to('xxl') {
   app-images-component:nth-child(4) {
@@ -137,5 +135,3 @@ a.router-link:hover {
     margin-top: calc(45svh - 132px);
   }
 }
-
-

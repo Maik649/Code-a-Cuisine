@@ -81,7 +81,6 @@ section {
   width: 100%;
   gap: var.$mgr-xll;
   border-radius: var.$border-radius;
-
   & .form-actions {
     margin-bottom: var.$mgr-medium;
   }
@@ -178,7 +177,6 @@ section {
       font-size: var.$font-size-md;
       cursor: pointer;
       border-radius: var.$border-radius;
-
       &:hover {
         background-color: rgba(var.$primary-bg, 0.32);
       }
@@ -197,7 +195,6 @@ section {
   padding: 9px 8px;
   color: var.$secondary-text-color;
   border-radius: var.$border-radius-xxl;
-
   &:focus {
     outline: none;
   }
@@ -223,7 +220,6 @@ input[type='number'].form-control-input::-webkit-inner-spin-button {
   overflow: hidden;
   min-width: 110px;
   transition: grid-template-columns 140ms ease-in-out;
-
   &:focus-within {
     outline: none;
     grid-template-columns: 30px 1fr 30px;
@@ -251,7 +247,6 @@ input[type='number'].form-control-input::-webkit-inner-spin-button {
   opacity: 0;
   pointer-events: none;
   transition: opacity 140ms ease-in-out;
-
   &:hover {
     background-color: rgba(var.$primary-bg, 0.4);
   }
@@ -370,8 +365,7 @@ ul {
     border: none;
     outline: none;
     border-radius: var.$border-radius;
-    background-color: var.$input-bg-color;
-    box-shadow: 0 8px 24px rgba(var.$primary-bg, 0.22);
+    background-color: transparent;
     z-index: 20;
 
     li {
@@ -390,9 +384,7 @@ ul {
       font-size: var.$font-size-md;
       cursor: pointer;
 
-      &.selected {
-        background-color: rgba(var.$primary-bg, 0.4);
-      }
+
     }
   }
 }

@@ -1,0 +1,14 @@
+
+@use '../../../scss/components/variablen' as var;
+@use '../../../scss/abstract/mixings' as mixin;
+
+img {
+  width: 100%;
+  height: auto;
+  &.arrow-icon {
+    position: relative !important ;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+  }
+}

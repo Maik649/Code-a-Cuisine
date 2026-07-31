@@ -37,11 +37,11 @@
     justify-content: space-around;
     align-items: center;
 }
+
 @mixin max-width($max-width){
     max-width: $max-width;
     margin: 0 auto;
 }
-
 
 $breakpoints: (
   'small':  ( min-width:  767px ),

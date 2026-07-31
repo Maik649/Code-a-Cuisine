@@ -11,7 +11,7 @@ header{
 .header-content{
     @include flex.flex-between();
     @include flex.max-width(var.$max-width);
-    width: 100%;
+    width: calc(100% - 40px);
     height: 100%;
     padding: 0 20px;
     align-items: center;
